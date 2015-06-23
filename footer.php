@@ -26,6 +26,7 @@
 
 		</div>
 
+        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/bootstrap.min.js"></script>
 		<?php // all js scripts are loaded in library/bones.php ?>
 		<?php wp_footer(); ?>
 
