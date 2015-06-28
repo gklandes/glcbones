@@ -1,26 +1,19 @@
-            <footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
-                <div id="inner-footer" class="wrap cf">
-                    <nav role="navigation">
-                        <?php wp_nav_menu(array(
-                        'container' => 'div',                           // enter '' to remove nav container (just make sure .footer-links in _base.scss isn't wrapping)
-                        'container_class' => 'footer-links cf',         // class of container (should you choose to use it)
-                        'menu' => __( 'Footer Links', 'bonestheme' ),   // nav name
-                        'menu_class' => 'nav footer-nav cf',            // adding custom nav class
-                        'theme_location' => 'footer-links',             // where it's located in the theme
-                        'before' => '',                                 // before the menu
-                        'after' => '',                                  // after the menu
-                        'link_before' => '',                            // before each link
-                        'link_after' => '',                             // after each link
-                        'depth' => 0,                                   // limit the depth of the nav
-                        'fallback_cb' => 'bones_footer_links_fallback'  // fallback function
-                        )); ?>
-                    </nav>
-                    <p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
-                </div>
+            <hr>
+
+            <footer>
+                <p>&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?></p>
             </footer>
-        </div>
-        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/bootstrap.min.js"></script>
-        <?php // all js scripts are loaded in library/bones.php ?>
+        </div></div> <!-- /container -->
+
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+        <script src="<?php echo get_template_directory_uri(); ?>/library/js/libs/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="<?php echo get_template_directory_uri(); ?>/library/js/libs/ie10-viewport-bug-workaround.js"></script>
         <?php wp_footer(); ?>
+    </div>
     </body>
-</html> <!-- end of site. what a ride! -->
+</html>
