@@ -36,8 +36,7 @@
         <![endif]-->
     </head>
 
-    <body>
-    <div id="container"><div id="inner-content" class="wrap cf">
+    <body <?php body_class(); ?>>
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -48,10 +47,6 @@
                     <a class="navbar-brand" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
-                    <!-- <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">Link</a></li>
-                    </ul> -->
                     <?php wp_nav_menu(array(
                         'container' => false, // remove nav container
                         'container_class' => 'menu cf', // class of container (should you choose to use it)
