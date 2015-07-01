@@ -5,9 +5,6 @@
 // wordpress admin bar
 body {
     margin-top: 51px;
-    &.logged-in {
-        margin-top: 83px;
-    }
 }
 .logged-in .navbar-fixed-top {
     margin-top: 32px;

@@ -6788,8 +6788,6 @@ button.close {
 
 body {
   margin-top: 51px; }
-  body.logged-in {
-    margin-top: 83px; }
 
 .logged-in .navbar-fixed-top {
   margin-top: 32px; }
