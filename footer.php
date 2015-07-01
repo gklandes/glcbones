@@ -1,8 +1,10 @@
-        <hr>
+        <div class="container">
+            <hr>
 
-        <footer>
-            <p>&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?></p>
-        </footer>
+            <footer>
+                <p>&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?></p>
+            </footer>
+        </div>
 
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="<?php echo get_template_directory_uri(); ?>/library/js/libs/bootstrap.min.js"></script>
