@@ -6794,3 +6794,6 @@ body {
 
 .logged-in .navbar-fixed-top {
   margin-top: 32px; }
+
+.content .sidebar {
+  margin-top: 30px; }
