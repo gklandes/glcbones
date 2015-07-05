@@ -2,6 +2,11 @@
 @import "bootstrap/_bootstrap";
 @import "font-awesome/font-awesome";
 
+// bootstrap adjustments
+.input-group-btn button {
+    height: 34px;
+}
+
 // wordpress admin bar
 body {
     margin-top: 51px;

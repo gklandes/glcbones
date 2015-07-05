@@ -6786,6 +6786,9 @@ button.close {
 .fa-medium:before {
   content: "\f23a"; }
 
+.input-group-btn button {
+  height: 34px; }
+
 body {
   margin-top: 51px; }
 
