@@ -46,7 +46,7 @@
                     </button>
                     <a class="navbar-brand" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
                 </div>
-                <div id="navbar" class="navbar-collapse collapse">
+                <div class="navbar-collapse collapse">
                     <?php wp_nav_menu(array(
                         'container' => false, // remove nav container
                         'menu' => __( 'The Main Menu', 'bonestheme' ), // nav name
@@ -59,6 +59,15 @@
                         'depth' => 0, // limit the depth of the nav
                         'fallback_cb' => '' // fallback function (if there is one)
                     )); ?>
+
+                    <form class="navbar-form navbar-right" role="search">
+                        <div class="input-group">
+                            <input type="text" id="s" name="s" value="" class="form-control" placeholder="Search">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit"><i class="fa fa-search"></i><span class="sr-only">Search</span></button>
+                            </span>
+                        </div>
+                    </form>
                 </div><!--/.navbar-collapse -->
             </div>
         </nav>
