@@ -1,8 +1,8 @@
-<form role="search" method="get" id="searchform" class="searchform" action="<?php echo home_url( '/' ); ?>">
-    <div>
-        <label for="s" class="screen-reader-text"><?php _e('Search for:','bonestheme'); ?></label>
-        <input type="search" id="s" name="s" value="" />
-
-        <button type="submit" id="searchsubmit" ><?php _e('Search','bonestheme'); ?></button>
+<form method="get" id="searchform" class="form searchform" action="<?php echo home_url( '/' ); ?>">
+    <div class="input-group">
+        <input type="text" id="s" name="s" value="" class="form-control" placeholder="Search">
+        <span class="input-group-btn">
+            <button class="btn btn-default" type="submit"><i class="fa fa-search"></i><span class="sr-only">Search</span></button>
+        </span>
     </div>
 </form>
