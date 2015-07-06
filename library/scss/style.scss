@@ -2,6 +2,11 @@
 @import "bootstrap/_bootstrap";
 @import "font-awesome/font-awesome";
 
+// HTML5 hooks
+main, section, article, header, footer, nav, aside, hgroup {
+ display: block;
+}
+
 // bootstrap adjustments
 .input-group-btn button {
     height: 34px;
