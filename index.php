@@ -2,9 +2,9 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-9">
+        <main id="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog" class="col-sm-9">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-            <article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
+            <article id="post-<?php the_ID(); ?>" <?php post_class( '' ); ?> role="article">
                 <header class="article-header">
                     <h1 class="h2 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
                     <p class="byline entry-meta vcard">
@@ -45,7 +45,7 @@
             </article>
         <?php endif; ?>
 
-        </div>
+        </main>
         <?php get_sidebar(); ?>
     </div>
 </div>

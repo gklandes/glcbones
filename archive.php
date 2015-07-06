@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="content container">
     <div class="row">
-        <div class="col-sm-9">
+        <main id="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog" class="col-sm-9">
             <?php
             the_archive_title( '<h1 class="page-title">', '</h1>' );
             the_archive_description( '<div class="taxonomy-description">', '</div>' );
@@ -42,7 +42,7 @@
                     </footer>
                 </article>
             <?php endif; ?>
-        </div>
+        </main>
         <?php get_sidebar(); ?>
     </div>
 </div>

@@ -1,10 +1,7 @@
-        <div class="container">
+        <footer class="footer container" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
             <hr>
-
-            <footer>
-                <p>&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?></p>
-            </footer>
-        </div>
+            <p>&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?></p>
+        </footer>
 
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="<?php echo get_template_directory_uri(); ?>/library/js/libs/bootstrap.min.js"></script>

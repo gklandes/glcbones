@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="content container">
     <div class="row">
-        <div class="col-sm-9">
+        <main id="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog" class="col-sm-9">
             <h1 class="archive-title"><span><?php _e( 'Search Results for:', 'bonestheme' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article">
@@ -41,7 +41,7 @@
                     </footer>
                 </article>
             <?php endif; ?>
-        </div>
+        </main>
         <?php get_sidebar(); ?>
     </div>
 </div>
