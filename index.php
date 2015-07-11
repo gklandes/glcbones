@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-
 <div class="container">
     <div class="row">
         <main id="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog" class="col-sm-9">
@@ -49,5 +48,4 @@
         <?php get_sidebar(); ?>
     </div>
 </div>
-
 <?php get_footer(); ?>
