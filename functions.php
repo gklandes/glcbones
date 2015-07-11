@@ -247,4 +247,10 @@ add_action('wp_enqueue_scripts', 'bones_fonts');
 add_post_type_support( 'page', 'excerpt' );
 add_post_type_support( 'page', 'post-formats' );
 
+// Make the metabox appear on the page editing screen
+function tags_for_pages() {
+  register_taxonomy_for_object_type('post_tag', 'page');
+}
+add_action('init', 'tags_for_pages');
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>
