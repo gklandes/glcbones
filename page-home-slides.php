@@ -51,18 +51,6 @@
         </a>
     </div>
 
-    <?php
-    // dev output
-    $query = new WP_Query( array( 
-        'post_type' => 'slides_type',
-        'posts_per_page' => 3
-    ) );
-    if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
-    <!-- <pre>
-    <?php //print_r($post); ?>
-    </pre> -->
-    <?php endwhile;  endif; ?>
-
     <!-- Landing Page Cards -->
     <div class="container">
         <div class="row">
@@ -75,10 +63,6 @@
             <div class="col-md-4">
                 <h2><?php echo $post->post_title; ?></h2>
                 <p><?php echo $post->post_excerpt; ?></p>
-                <!-- <pre>
-                <?php //print_r($post); ?>
-                </pre> -->
-                <!-- <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> -->
                 <p><a class="btn btn-default" href="<?php echo $post->guid; ?>" role="button">Learn more &raquo;</a></p>
             </div>
             <?php endwhile; ?>
@@ -87,6 +71,7 @@
             <?php endif; ?>
         </div>
     </div>
+
     <!-- Content of home page -->
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <?php //the_content(); ?>

@@ -21,6 +21,7 @@
         </div>
     </div>
     <?php endwhile; endif; ?>
+
     <!-- Landing Page Cards -->
     <div class="container">
         <div class="row">
@@ -34,10 +35,6 @@
             <div class="col-md-4">
                 <h2><?php echo $post->post_title; ?></h2>
                 <p><?php echo $post->post_excerpt; ?></p>
-                <!-- <pre>
-                <?php //print_r($post); ?>
-                </pre> -->
-                <!-- <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p> -->
                 <p><a class="btn btn-default" href="<?php echo $post->guid; ?>" role="button">Learn more &raquo;</a></p>
             </div>
             <?php endwhile; ?>
