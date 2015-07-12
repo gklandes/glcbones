@@ -1,37 +1,18 @@
-# Bones
-A Lightweight Wordpress Development Theme
+# GLCBones
+This is my humble attempt to streamline the setup of a Wordpress site built on Bootstrap styles. It also implements Fontawesome over Bootstrap's glyphicons just because I like them better. I used the "Bones" theme as my starting point and give super high marks to Mr. Machado for a theme code base that was so well documented that it taught me most of what I needed to know to get things rolling.
 
+## Credits
+### Bones WP Theme
 Bones is designed to make the life of developers easier. It's built
 using HTML5 & has a strong semantic foundation.
-It's constantly growing so be sure to check back often if you are a
-frequent user. I'm always open to contribution. :)
-
 Designed by Eddie Machado
 http://themble.com/bones
-
 License: WTFPL
 License URI: http://sam.zoy.org/wtfpl/
 Are You Serious? Yes.
 
-#### Special Thanks to:
-Paul Irish & the HTML5 Boilerplate
-Yoast for some WP functions & optimization ideas
-Andrew Rogers for code optimization
-David Dellanave for speed & code optimization
-and several other developers. :)
+### Bootstrap
+http://getbootstrap.com/
 
-#### Submit Bugs & or Fixes:
-https://github.com/eddiemachado/bones/issues
-
-To view Release & Update Notes, read the CHANGELOG.md file in the main folder.
-
-For more news and to see why my parents constantly ask me what I'm
-doing with my life, follow me on twitter: @eddiemachado
-
-## Helpful Tools & Links
-
-Yeoman generator to quickly install Bones Wordpress starter theme into your Wordpress theme folder
-by 0dp
-https://github.com/0dp/generator-wp-bones
-
-
+### Fontawesome
+http://fortawesome.github.io/Font-Awesome/
