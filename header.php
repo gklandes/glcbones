@@ -40,7 +40,7 @@
         <nav class="navbar navbar-inverse navbar-fixed-top" role="banner" itemscope itemtype="http://schema.org/WPHeader">
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-controls="mainNav">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="fa fa-bars"></span>
                     </button>
@@ -48,7 +48,7 @@
                         <?php bloginfo('name'); ?>
                     </a>
                 </div>
-                <div class="navbar-collapse collapse" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                <div class="navbar-collapse collapse" id="mainNav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
                     <?php wp_nav_menu(array(
                         'container' => false, // remove nav container
                         'menu' => __( 'The Main Menu', 'bonestheme' ), // nav name
