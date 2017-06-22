@@ -16,3 +16,15 @@ http://getbootstrap.com/
 
 ### Fontawesome
 http://fortawesome.github.io/Font-Awesome/
+
+# Installation
+* clone this repo outside the webroot
+* copy or symlink the 'glcbones' folder into _webroot_/wp-content/themes/
+
+# Setup Notes
+* install theme
+* Create page 'HOME'; set template to a 'home-*' theme; set as static home page (Appearence > Customize > Static Front Page)
+* Create page 'Blog'; select this page as 'posts' page (Appearence > Customize > Static Front Page)
+* Stub out pages for top bar ('about', 'contact', etc.)
+* Create new menu 'MainNav' (Appearence > menus); add any top bar pages; remember to add new top bar pages to this menu
+* Edit Sidebar; remove search field
