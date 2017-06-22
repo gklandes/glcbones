@@ -255,4 +255,11 @@ function tags_for_pages() {
 }
 add_action('init', 'tags_for_pages');
 
+// make anchor out of a title
+function anchorFromTitle($str) {
+    $str = strtolower($str);
+    $str = preg_replace('/\s+/','_',$str);
+    return $str;
+}
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>

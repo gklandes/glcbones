@@ -8,7 +8,7 @@
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <?php $slide_query = new WP_Query( array( 
             'post_type' => 'slides_type',
-            'posts_per_page' => 3
+            // 'posts_per_page' => 3
         ) ); ?>
         <!-- Indicators -->
         <ol class="carousel-indicators">

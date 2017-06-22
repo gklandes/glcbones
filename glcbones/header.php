@@ -25,6 +25,9 @@
         <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
         <meta name="theme-color" content="#121212">
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+
+        <?php // pre-load web font ?>
+        <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Raleway" rel="stylesheet">
         <?php // wordpress head functions ?>
         <?php wp_head(); ?>
         <?php // end of wordpress head ?>
@@ -44,32 +47,34 @@
                         <span class="sr-only">Toggle navigation</span>
                         <span class="fa fa-bars"></span>
                     </button>
-                    <a class="navbar-brand" href="<?php echo home_url(); ?>" itemscope itemtype="http://schema.org/Organization">
+                    <a class="navbar-brand" href="<?php echo home_url(); ?>/#" itemscope itemtype="http://schema.org/Organization">
                         <?php bloginfo('name'); ?>
                     </a>
                 </div>
                 <div class="navbar-collapse collapse" id="mainNav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-                    <?php wp_nav_menu(array(
-                        'container' => false, // remove nav container
-                        'menu' => __( 'The Main Menu', 'bonestheme' ), // nav name
-                        'menu_class' => 'nav navbar-nav', // adding custom nav class
-                        'theme_location' => 'main-nav', // where it's located in the theme
-                        'before' => '<li>', // before the menu
-                        'after' => '</li>', // after the menu
-                        'link_before' => '', // before each link
-                        'link_after' => '', // after each link
-                        'depth' => 0, // limit the depth of the nav
-                        'fallback_cb' => '' // fallback function (if there is one)
-                    )); ?>
-
-                    <form class="navbar-form navbar-right" role="search">
-                        <div class="input-group">
-                            <input type="text" id="s" name="s" value="" class="form-control" placeholder="Search">
-                            <span class="input-group-btn">
-                                <button class="btn btn-default" type="submit"><i class="fa fa-search"></i><span class="sr-only">Search</span></button>
-                            </span>
-                        </div>
-                    </form>
+                    <?php $query = new WP_Query( array( 
+                        'post_type' => 'page',
+                        'posts_per_page' => -1,
+                        'meta_query' => array(
+                            array(
+                                'key' => '_wp_page_template',
+                                'value' => 'page-landing.php', // template name as stored in the dB
+                            )
+                        ),
+                        'orderby' => '-menu_order',
+                        'order' => 'ASC'
+                    ) );
+                    if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="/#<?php echo anchorFromTitle($post->post_title); ?>">
+                                <?php echo $post->post_title; ?>
+                            </a>
+                        </li>
+                    </ul>
+                    <?php endwhile; ?>
+                    <?php endif; ?>
                 </div><!--/.navbar-collapse -->
+                
             </div>
         </nav>

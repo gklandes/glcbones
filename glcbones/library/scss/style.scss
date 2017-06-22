@@ -1,36 +1,160 @@
 // 3rd party libs
-@import "bootstrap/_bootstrap";
-@import "font-awesome/font-awesome";
+@import './bootstrap';
+@import './font-awesome/font-awesome';
+// variables
+$fontfamily: 'Raleway',
+sans-serif;
+$titlefontfamily: 'Kaushan Script',
+cursive;
+// Wordpress related
+.alignright {
+  float: right;
+}
+
+.alignleft {
+  float: left;
+}
 
 // HTML5 hooks
-main, section, article, header, footer, nav, aside, hgroup {
- display: block;
+main,
+section,
+article,
+header,
+footer,
+nav,
+aside,
+hgroup {
+  display: block;
 }
 
 // bootstrap adjustments
 .input-group-btn button {
-    height: 34px;
+  height: 34px;
+}
+
+.navbar-inverse .navbar-toggle {
+  border-color: $gray;
+
+  .fa {
+    color: $gray;
+  }
+}
+
+.navbar-brand,
+h1 {
+  font-family: $titlefontfamily
 }
 
 // wordpress admin bar
 body {
-    margin-top: 51px;
+  font-family: $fontfamily;
+  font-weight: 400;
+  margin-top: 51px;
 }
+
 .logged-in .navbar-fixed-top {
-    margin-top: 32px;
+  margin-top: 32px;
 }
 
 // layout
 .content .sidebar {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .jumbotron {
-    color: white;
-    background: url(images/bg.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    text-shadow: 1px 1px 2px black;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background: url() no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  height: 600px;
+  text-shadow: 1px 1px 2px black;
 }
+
+// WGD Mods
+h1,
+h2 {
+  color: #f0ad4e;
+  font-family: $fontfamily;
+  font-size: 6rem;
+  text-shadow: 2px 2px 0 #000;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+.navbar-brand {
+  font-family: $fontfamily;
+}
+
+.jumbotron {
+  h1,
+  h2 {
+  font-family: $fontfamily;
+  font-size: 6rem;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 3px 2px 0 #000;
+  }
+  h2 {
+  color: #f0ad4e;
+  font-family: $fontfamily;
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 2px 1px 0 #000;
+  }
+}
+
+.home-section {
+  padding: 3rem 0;
+  h2.home-section-title {
+  margin-top: 0;
+  padding-top: 0;
+  }
+  p {
+  font-size: 1.8rem;
+  }
+}
+
+.section-icon {
+  font-size: 10rem;
+}
+
+.btn.buy-now {
+  font-family: $fontfamily;
+  font-size: 3rem;
+}
+
+// TABLET & SMALLER LAPTOPS
+// @media only screen and (min-width: 768px) {
+@media only screen and (min-width: $screen-xs-max) {}
+
+// DESKTOP
+// @media only screen and (min-width: 1030px) {
+@media only screen and (min-width: $screen-sm-max) {
+  .jumbotron {
+  h1,
+  h2 {
+  font-size: 12rem;
+  text-shadow: 5px 7px 0 #000;
+  }
+  h2 {
+  font-size: 6rem;
+  text-shadow: 3px 4px 0 #000;
+  }
+  }
+  .home-section {
+  padding: 5rem 0;
+  h2.home-section-title {
+  text-align: right;
+  }
+  p {
+  font-size: 2.5rem;
+  }
+  }
+}
+
+// LARGE VIEWING SIZE
+// @media only screen and (min-width: 1240px) {
+@media only screen and (min-width: $screen-md-max) {}
